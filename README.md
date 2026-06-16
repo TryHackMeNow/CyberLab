@@ -1,5 +1,7 @@
 # CyberLab
-VirtualBox-based hacking lab which can be run on a single computer. The lab has a top-level domain which is organised into LAN, WAN and DMZ network segments. The network segments are routed via a pfSense firewall. Hosts include a Kali-Linux-based villain box, Metasploitable2 and OWASP-BWA victim boxes and a Windows domain controller.
+VirtualBox-based hacking lab which can be run on a single computer. The lab has a top-level domain which is organized into LAN, WAN and DMZ network segments. The network segments are routed via a pfSense firewall. Hosts include a Kali-Linux-based villain box, Metasploitable and OWASP-BWA victim boxes and a Windows domain controller.
+
+![Alt text](illustrations/CyberLab%20Overview%20Light.drawio.svg)
 
 # Hosts
 | IP                | Host Name         | Description                   | OS                     |
@@ -13,9 +15,7 @@ VirtualBox-based hacking lab which can be run on a single computer. The lab has 
 | `172.20.40.40`    | kali              | Kali-Linux Attack-Box         | Debian-Linux           |    
 |                   |                   |                               |                        |
 
-**Note**: prepend `victim.local` to the host name to get the fully qualified domain name, e.g. `firewall.victim.local`.
-
-**Note**: all hosts (virtualbox Guest-VMs) use german regional settings, such as keyboard layout, by default.
+**Note**: prepend `victim.local` to the host name to get the host's fully qualified domain name, e.g. `firewall.victim.local`.
 
 # Subnets
 | IP                | NetMask  | DHCP  | Default Gateway  | Simulated Type  | Team      |
@@ -35,6 +35,32 @@ VirtualBox-based hacking lab which can be run on a single computer. The lab has 
 |                   |                        |        |                   |
 
 **Note**: prepend `VICTIM\` to the user name to get the windows netbios login name or `victim.local` to get the fully-qualified domain name, e.g. `alice.victim.local`.
+
+# Setup Instructions
+
+### Download VirtualBox
+
+Download Oracle VirtualBox for your host OS from www.virtualbox.org.
+
+### Import VM-Appliances into VirtualBox
+
+Download the cyber lab VM appliance files. The lab consists of the following 7 VM-appliances (or lab hosts):
+```
+firewall.ova
+kali.ova
+winxp.ova
+winserver.ova
+debserver.ova
+meta.ova
+owasp.ova
+```
+Import the VM-appliances into VirtualBox (File -> Import Appliance). After importing, each VM can be started or stopped separately from within VirtualBox. When a VM is started, the OS/Shell of the affiliated host will come up in a new window. Setup is complete. You may now start to BLUE- or RED-team your way through the network.
+
+**Note**: all hosts (virtualbox Guest-VMs) are currently set to use german regional settings by default. This includes keyboard layout.
+
+**Note**: Appliance files are temporarily unavailable due to servicing.
+
+
 
 
 
