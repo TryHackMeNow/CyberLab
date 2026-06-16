@@ -5,7 +5,7 @@
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
         <mxCell id="a0UQNTms_buoy0jP--Xc-48" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=none;strokeWidth=2;labelPosition=center;verticalLabelPosition=top;align=center;verticalAlign=bottom;fontSize=14;fontStyle=1;dashed=1;strokeColor=light-dark(#000000,#FFF2CC);fontColor=light-dark(#000000,#FFF2CC);spacingTop=-1;spacingBottom=4;" value="Attacker - Subnet 40" vertex="1">
-          <mxGeometry height="170" width="180" x="504" y="228" as="geometry" />
+          <mxGeometry height="160" width="171" x="500" y="250" as="geometry" />
         </mxCell>
         <mxCell id="eCaSIDYicL7Bv3XTQ8XW-33" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=none;strokeWidth=2;labelPosition=center;verticalLabelPosition=top;align=center;verticalAlign=bottom;fontSize=14;fontStyle=1;dashed=1;strokeColor=light-dark(#000000,#FFF2CC);fontColor=light-dark(#000000,#FFF2CC);" value="WAN" vertex="1">
           <mxGeometry height="210" width="220" x="279.5" y="50" as="geometry" />
@@ -64,16 +64,14 @@
         <mxCell id="eCaSIDYicL7Bv3XTQ8XW-21" parent="1" style="aspect=fixed;html=1;align=right;shadow=0;dashed=0;spacingTop=3;image=img/lib/active_directory/windows_server_2.svg;shape=image;labelBackgroundColor=none;verticalAlign=middle;verticalLabelPosition=middle;perimeter=ellipsePerimeter;labelPosition=left;" value="winserver&amp;nbsp; &amp;nbsp;&amp;nbsp;&lt;div&gt;172.20.20.12&amp;nbsp; &amp;nbsp;&amp;nbsp;&lt;/div&gt;" vertex="1">
           <mxGeometry height="57.32" width="47" x="130" y="220" as="geometry" />
         </mxCell>
-        <mxCell id="a0UQNTms_buoy0jP--Xc-6" edge="1" parent="1" source="eCaSIDYicL7Bv3XTQ8XW-26" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;endArrow=none;endFill=0;opacity=40;curved=1;exitX=0.25;exitY=1;exitDx=0;exitDy=0;fontSize=12;labelPosition=center;verticalLabelPosition=top;align=center;verticalAlign=bottom;labelBorderColor=light-dark(#000000,#FFB366);textShadow=0;sourcePerimeterSpacing=0;spacingTop=0;spacingLeft=-100;spacingBottom=-15;labelBackgroundColor=default;" target="eCaSIDYicL7Bv3XTQ8XW-10" value="&amp;nbsp;Link 4&amp;nbsp;">
+        <mxCell id="a0UQNTms_buoy0jP--Xc-6" edge="1" parent="1" source="eCaSIDYicL7Bv3XTQ8XW-26" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;endArrow=none;endFill=0;opacity=40;exitX=0.25;exitY=1;exitDx=0;exitDy=0;fontSize=12;labelPosition=center;verticalLabelPosition=top;align=center;verticalAlign=bottom;labelBorderColor=light-dark(#000000,#FFB366);textShadow=0;sourcePerimeterSpacing=0;spacingTop=0;spacingLeft=-100;spacingBottom=-15;labelBackgroundColor=default;" value="&amp;nbsp;Link 4&amp;nbsp;">
           <mxGeometry relative="1" as="geometry">
-            <Array as="points">
-              <mxPoint x="490" y="360" />
-            </Array>
-            <mxPoint x="556.9099999999999" y="263" as="sourcePoint" />
+            <mxPoint x="581.8663594500567" y="360.91344597206444" as="sourcePoint" />
+            <mxPoint x="396.919999999981" y="371" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="eCaSIDYicL7Bv3XTQ8XW-26" parent="1" style="image;aspect=fixed;perimeter=ellipsePerimeter;html=1;align=center;shadow=0;dashed=0;spacingTop=3;image=img/lib/active_directory/vista_client.svg;labelPosition=center;verticalLabelPosition=top;verticalAlign=bottom;labelBackgroundColor=none;" value="kali&lt;div&gt;172.20.40.40&lt;br&gt;&lt;br&gt;&lt;/div&gt;" vertex="1">
-          <mxGeometry height="50" width="38" x="571" y="304.32" as="geometry" />
+          <mxGeometry height="50" width="38" x="562" y="322.32" as="geometry" />
         </mxCell>
         <mxCell id="a0UQNTms_buoy0jP--Xc-4" edge="1" parent="1" source="eCaSIDYicL7Bv3XTQ8XW-35" style="rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.25;exitDx=0;exitDy=0;endArrow=none;endFill=0;opacity=40;entryX=1;entryY=1;entryDx=0;entryDy=0;fontSize=12;labelBorderColor=light-dark(#000000,#FFB366);spacingLeft=21;spacingBottom=77;" target="eCaSIDYicL7Bv3XTQ8XW-10" value="&amp;nbsp;Link&amp;nbsp; 3&amp;nbsp;">
           <mxGeometry relative="1" x="0.0035" as="geometry">
