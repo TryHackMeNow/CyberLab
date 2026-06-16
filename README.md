@@ -1,5 +1,5 @@
 # CyberLab
-VirtualBox-based hacking lab which can be run on a single computer. The lab computers are partitioned into a LAN, WAN and a DMZ subnet. The traffic between the subnets is routed by a pfSense firewall router. Hosts include a Kali-Linux-based attacker box, Metasploitable- and OWASP-BWA victim boxes and a Windows domain controller.
+*VirtualBox*-based hacking lab which can be run on a single PC. All lab computers (hosts) are virtual machines executed within *VirtualBox*. The hosts are partitioned into a LAN, WAN and a DMZ subnet. The traffic between the subnets is routed by a pfSense firewall router. The firewall router is itself a virtual machine. Hosts include a Kali-Linux-based attacker box, Metasploitable- and OWASP-BWA victim boxes and a Windows domain controller.
 
 ![Alt text](./Illustrations/CyberLab%20Overview%20Light.drawio.svg)
 
@@ -12,9 +12,9 @@ The lab setup is a two-step procedure:
 
 Download *VirtualBox* for your host OS from www.virtualbox.org and install the software.
 
-### 2. Import VM-Appliances into VirtualBox
+### 2. Import VMs into VirtualBox
 
-Download the cyber lab VM appliance files below and import them into *VirtualBox* (File -> Import Appliance):
+Download the virtual machine files below and import them into *VirtualBox* (File -> Import Appliance):
 
 - firewall.ova
 - kali.ova
@@ -24,7 +24,7 @@ Download the cyber lab VM appliance files below and import them into *VirtualBox
 - meta.ova
 - owasp.ova
 
-Each file contains the virtual machine (VM) of the named host. After importing, each host can be booted or shutdown separately from within *VirtualBox*. When a host is booted up, a window will open showing the host's terminal or GUI. You may now start to (counter-) hack your way through the network by interacting with the different hosts.
+Each file contains the virtual machine (VM) of the named CyberLab host. After importing, each host can be booted or shutdown separately from within *VirtualBox*. When a host is booted up, a window will open showing the host's terminal or GUI. You may now start to (counter-) hack your way through the network by interacting with the different hosts.
 
 **Notes**: 
 - Appliance files are temporarily unavailable due to servicing.
