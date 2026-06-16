@@ -71,7 +71,7 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="eCaSIDYicL7Bv3XTQ8XW-26" parent="1" style="image;aspect=fixed;perimeter=ellipsePerimeter;html=1;align=center;shadow=0;dashed=0;spacingTop=3;image=img/lib/active_directory/vista_client.svg;labelPosition=center;verticalLabelPosition=top;verticalAlign=bottom;labelBackgroundColor=none;" value="kali&lt;div&gt;172.20.40.40&lt;br&gt;&lt;br&gt;&lt;/div&gt;" vertex="1">
-          <mxGeometry height="50" width="38" x="562" y="322.32" as="geometry" />
+          <mxGeometry height="50" width="38" x="562" y="323.32" as="geometry" />
         </mxCell>
         <mxCell id="a0UQNTms_buoy0jP--Xc-4" edge="1" parent="1" source="eCaSIDYicL7Bv3XTQ8XW-35" style="rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.25;exitDx=0;exitDy=0;endArrow=none;endFill=0;opacity=40;entryX=1;entryY=1;entryDx=0;entryDy=0;fontSize=12;labelBorderColor=light-dark(#000000,#FFB366);spacingLeft=21;spacingBottom=77;" target="eCaSIDYicL7Bv3XTQ8XW-10" value="&amp;nbsp;Link&amp;nbsp; 3&amp;nbsp;">
           <mxGeometry relative="1" x="0.0035" as="geometry">
