@@ -11,7 +11,7 @@ The lab setup is a two-step procedure:
 
 ### 1. Download VirtualBox
 
-Download Oracle VirtualBox for your host OS from www.virtualbox.org.
+Download VirtualBox for your host OS from www.virtualbox.org and install the software.
 
 ### 2. Import VM-Appliances into VirtualBox
 
@@ -25,7 +25,7 @@ Download the cyber lab VM appliance files below and import them into VirtualBox 
 - meta.ova
 - owasp.ova
 
-After importing, each VM can be started or stopped separately from within VirtualBox. When a VM is started, the terminal of the affiliated host will come up in a new window. You may now start to (counter-) hack your way through the network.
+Each file contains the virtual machine (VM) of the named host. After importing, each host can be booted or shutdown separately from within VirtualBox. When a host is booted up, a window will open showing the host's terminal or GUI. You may now start to (counter-) hack your way through the network by interacting with the different hosts.
 
 **Notes**: 
 - Appliance files are temporarily unavailable due to servicing.
@@ -45,7 +45,7 @@ After importing, each VM can be started or stopped separately from within Virtua
 **Notes** 
 - All host have static IPv4 addresses (although DHCP is offered within each subnet).
 - Prepend `victim.local` to the host name to get the host's fully qualified domain name, e.g. `firewall.victim.local`.
-- All hosts (virtualbox Guest-VMs) are currently set to use german regional settings by default. This includes keyboard layout.
+- All hosts are currently set to use german regional settings by default. This includes keyboard layout.
 
 # Users
 | Name              | Login as               | Admin  | Default Password  | Role      |
