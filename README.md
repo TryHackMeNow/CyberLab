@@ -48,7 +48,7 @@ Setup is complete. After importing, each VM can be started or stopped separately
 **Note**: prepend `victim.local` to the host name to get the host's fully qualified domain name, e.g. `firewall.victim.local`.
 
 # Subnets
-| IP                | NetMask  | DHCP  | Default Gateway  | Simulated Type  | Team      |
+| IP                | NetMask  | DHCP  | Default Gateway  | Simulated Type  | Role      |
 | :-----------------| :------: | :---: | :--------------: | :-------------  | --------: |
 | `210.200.100.1`   | 32       |       | `210.200.100.1`  | WAN             | Victim    |
 | `127.20.20.x`     | 24       | x     | `172.20.20.10`   | LAN             | Victim    |
@@ -56,12 +56,12 @@ Setup is complete. After importing, each VM can be started or stopped separately
 | `127.20.40.x`     | 24       | x     | `172.20.40.10`   | WAN             | Attacker  |
 
 # Users
-| Name              | Login Name             | Admin  | Default Password  |
-| :---------------- | :-------------------   | :----: | ----------------: |
-| Administrator     | `VICTIM\Administrator` | x      | TryHackMe!        |
-| alice             | `VICTIM\alice`         | x      | TryHackMe!        |
-| bob               | `VICTIM\bob`           |        | TryHackMe!        |
-| trent             | `VICTIM\trent`         |        | TryHackMe!        |
-|                   |                        |        |                   |
+| Name              | Login Name             | Admin  | Default Password  | Role      |
+| :---------------- | :-------------------   | :----: | ----------------: | --------: |
+| Administrator     | `VICTIM\Administrator` | x      | TryHackMe!        | Victim    |
+| alice             | `VICTIM\alice`         | x      | TryHackMe!        | Victim    |
+| bob               | `VICTIM\bob`           |        | TryHackMe!        | Victim    |
+| trent             | `VICTIM\trent`         |        | TryHackMe!        | Victim    |
+|                   |                        |        |                   |           |
 
 **Note**: prepend `VICTIM\` to the user name to get the windows netbios login name or `victim.local` to get the fully-qualified domain name (FQDN), e.g. `alice.victim.local`.
