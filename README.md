@@ -1,7 +1,7 @@
 # CyberLab
 VirtualBox-based hacking lab which can be run on a single computer. The lab has a top-level domain which is organized into LAN, WAN and DMZ network segments. The network segments are routed via a pfSense firewall. Hosts include a Kali-Linux-based villain box, Metasploitable and OWASP-BWA victim boxes and a Windows domain controller.
 
-![Alt text](illustrations/CyberLab%20Overview%20Light.drawio.svg)
+![Alt text](./Illustrations/CyberLab%20Overview%20Light.drawio.svg)
 
 # Hosts
 | IP                | Host Name         | Description                   | OS                     |
@@ -44,7 +44,7 @@ Download Oracle VirtualBox for your host OS from www.virtualbox.org.
 
 ### Import VM-Appliances into VirtualBox
 
-Download the cyber lab VM appliance files. The lab consists of the following 7 VM-appliances (or lab hosts):
+Download the cyber lab VM appliance files. The lab consists of the following VM-appliances (or lab hosts):
 ```
 firewall.ova
 kali.ova
