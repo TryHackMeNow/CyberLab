@@ -25,7 +25,7 @@
             <mxPoint x="400" y="150" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="eCaSIDYicL7Bv3XTQ8XW-10" parent="1" style="image;aspect=fixed;perimeter=ellipsePerimeter;html=1;align=right;shadow=0;dashed=0;spacingTop=-10;image=img/lib/active_directory/generic_server.svg;fontSize=12;labelPosition=left;verticalLabelPosition=bottom;verticalAlign=top;spacingLeft=0;spacingRight=10;spacingBottom=0;spacing=-2;" value="firewall&lt;div&gt;172.20.10.10&lt;br&gt;172.20.20.10&lt;br&gt;172.20.30.10&lt;br&gt;172.20.40.10&lt;/div&gt;" vertex="1">
+        <mxCell id="eCaSIDYicL7Bv3XTQ8XW-10" parent="1" style="image;aspect=fixed;perimeter=ellipsePerimeter;html=1;align=right;shadow=0;dashed=0;spacingTop=-10;image=img/lib/active_directory/generic_server.svg;fontSize=12;labelPosition=left;verticalLabelPosition=bottom;verticalAlign=top;spacingLeft=0;spacingRight=10;spacingBottom=0;spacing=-2;" value="firewall&lt;div&gt;210.200.10.1&lt;br&gt;172.20.20.10&lt;br&gt;172.20.30.10&lt;br&gt;172.20.40.10&lt;/div&gt;" vertex="1">
           <mxGeometry height="54" width="30.24" x="366.68" y="344" as="geometry" />
         </mxCell>
         <mxCell id="a0UQNTms_buoy0jP--Xc-1" edge="1" parent="1" source="eCaSIDYicL7Bv3XTQ8XW-17" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.25;entryY=0;entryDx=0;entryDy=0;endArrow=none;endFill=0;curved=1;opacity=40;" target="eCaSIDYicL7Bv3XTQ8XW-35">
