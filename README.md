@@ -1,5 +1,5 @@
 # CyberLab
-VirtualBox-based hacking lab which can be run on a single computer. The lab has a top-level domain which is organized into LAN, WAN and DMZ network segments. The network segments are routed via a pfSense firewall. Hosts include a Kali-Linux-based villain box, Metasploitable and OWASP-BWA victim boxes and a Windows domain controller.
+VirtualBox-based hacking lab which can be run on a single computer. The lab has a top-level domain which is organized into LAN, WAN and DMZ network segments. The network segments are routed via a pfSense firewall. Hosts include a Kali-Linux-based attacker box, Metasploitable and OWASP-BWA victim boxes and a Windows domain controller.
 
 ![Alt text](./Illustrations/CyberLab%20Overview%20Light.drawio.svg)
 
@@ -32,16 +32,16 @@ Import the VM-appliances into VirtualBox (File -> Import Appliance).
 Setup is complete. After importing, each VM can be started or stopped separately from within VirtualBox. When a VM is started, the terminal of the affiliated host will come up in a new window. You may now start to BLUE- or RED-team your way through the network from the provided terminals.
 
 # Hosts
-| IP (Static)       | Host Name         | Description                   | OS                     |
-| :-----------------| ----------------  | :---------------------------- | ---------------------- |
-| `172.20.10.10`    | firewall          | pfSense Firewall Server       | FreeBSD                |    
-| `172.20.20.12`    | winserver         | Windows AD Domain Controller  | Win-Server 2012        |    
-| `172.20.20.9`     | winxp             | Windows PC                    | Windows XP Pro         |    
-| `172.20.30.30`    | meta              | Metasploitable-2 Victim-Box   | Ubuntu-Linux           |    
-| `172.20.30.40`    | debserver         | Web/Mail/SMB-Server           | Debian Linux           |    
-| `172.20.30.80`    | owasp             | OWASP-BWA Victim-Box          | Ubuntu-Linux           |    
-| `172.20.40.40`    | kali              | Kali-Linux Attack-Box         | Debian-Linux           |    
-|                   |                   |                               |                        |
+| IP (Static)       | Host Name        | Role      | Description                   | OS                     |
+| :-----------------| ---------------- | --------  | :---------------------------- | ---------------------- |
+| `172.20.10.10`    | firewall         | Victim    | pfSense Firewall Server       | FreeBSD                |    
+| `172.20.20.12`    | winserver        | Victim    | Windows AD Domain Controller  | Win-Server 2012        |    
+| `172.20.20.9`     | winxp            | Victim    | Generic Windows Workstation   | Windows XP Pro         |    
+| `172.20.30.40`    | debserver        | Victim    | Server (Web/Mail/FTP/SMB...)  | Debian Linux           |    
+| `172.20.30.30`    | meta             | Victim    | This host is mega-exploitable | Ubuntu-Linux           |
+| `172.20.30.80`    | owasp            | Victim    | This host has broken webapps  | Ubuntu-Linux           |    
+| `172.20.40.40`    | kali             | Attacker  | This host has 'the' tools     | Debian-Linux           |    
+|                   |                  |           |                               |                        |
 
 **Note** All host-IP's are configured as static IPv4 addresses (although DHCP is offered within each subnet).
 
