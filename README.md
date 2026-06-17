@@ -1,6 +1,6 @@
 # CyberLab
 
-*VirtualBox*-based hacking lab which can be run on a single PC. All lab computers (hosts) are virtual machines executed within *VirtualBox*. The hosts are partitioned into a LAN, WAN and a DMZ subnet. The traffic between the subnets is routed by a pfSense firewall router. The firewall router is itself a virtual machine. Hosts include a Kali-Linux-based attacker box, Metasploitable- and OWASP-BWA victim boxes and a Windows domain controller.
+*VirtualBox*-based hacking lab which can be run on a single PC. All lab computers (hosts) are virtual machines executed within *VirtualBox*. The hosts are partitioned into a LAN, WAN and a DMZ network segment. The traffic between the subnets is routed by a pfSense firewall router. The firewall router is itself a virtual machine. Hosts include a Kali-Linux-based attacker box, Metasploitable- and OWASP-BWA victim boxes and a Windows domain controller.
 
 ![Network Overview](./Illustrations/CyberLab%20Overview.drawio.svg)
 
@@ -39,9 +39,9 @@ After importing, each host can be booted or shutdown separately from within *Vir
 # Hosts
 | Host Name    | IP (Static)       | Subnet   | Description                   | OS                | Role     | 
 | :----------- | :-----------------| -------- | :---------------------------- | ----------------- | -------: | 
-| firewall     | `172.20.10.10`    | WAN      | pfSense Firewall Router       | FreeBSD           | Victim   |     
-| winserver    | `172.20.20.12`    | LAN      | Windows AD Domain Controller  | Win-Server 2012   | Victim   |     
-| winxp        | `172.20.20.9`     | LAN      | Generic Windows Workstation   | Windows XP Pro    | Victim   |     
+| firewall     | `172.20.10.10`    | WAN      | pfSense firewall router       | FreeBSD           | Victim   |     
+| winserver    | `172.20.20.12`    | LAN      | AD domain controller          | Win-Server 2012   | Victim   |     
+| winxp        | `172.20.20.9`     | LAN      | Generic workstation           | Windows XP Pro    | Victim   |     
 | debserver    | `172.20.30.40`    | DMZ      | Server (Web/Mail/FTP/SMB...)  | Debian Linux      | Victim   |     
 | meta         | `172.20.30.30`    | DMZ      | This host is meta-exploitable | Ubuntu-Linux      | Victim   | 
 | owasp        | `172.20.30.80`    | DMZ      | This host has broken webapps  | Ubuntu-Linux      | Victim   |     
@@ -75,7 +75,7 @@ Hosts `debserver`, `winxp` and `winserver` have access to each other's shared fo
 # Firewall
 Host `firewall.victim.local` is the lab's central node. It runs *pfSense CE* and with that is a firewall with IP routing, DHCP and DNS resolution capabilities. The firewall is managed via web interface. The web interface is online at `http://172.20.20.10` (port 80). User: `admin`, password: `TryHackMe!`.
 
-The firewall router has 4 network adapter cards. Each network adapter acts as the local gateway for the attached subnet. For example, the default gateway of the `LAN` subnet has IP address `172.20.20.10`. The firewall router forwards DNS requests it cannot resolve to the WAN interface (internet) and the active directory domain controller.
+The firewall router has 4 network adapter cards. Each network adapter acts as the local gateway for the attached network segment. For example, the default gateway of the `LAN` subnet has IP address `172.20.20.10`. The firewall router forwards DNS requests it cannot resolve to the WAN interface (internet) and the active directory domain controller.
 
 | Adapter  | Name     | IP                | Subnet | VirtualBox Link Type |
 | :------- | :------  | :---------------- | :------| :------------------- |
