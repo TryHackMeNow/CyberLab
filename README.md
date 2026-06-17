@@ -1,7 +1,7 @@
 # CyberLab
 *VirtualBox*-based hacking lab which can be run on a single PC. All lab computers (hosts) are virtual machines executed within *VirtualBox*. The hosts are partitioned into a LAN, WAN and a DMZ subnet. The traffic between the subnets is routed by a pfSense firewall router. The firewall router is itself a virtual machine. Hosts include a Kali-Linux-based attacker box, Metasploitable- and OWASP-BWA victim boxes and a Windows domain controller.
 
-![Alt text](./Illustrations/CyberLab%20Overview%20Light.drawio.svg)
+![Network Overview](./Illustrations/CyberLab%20Overview%20Light.drawio.svg)
 
 Similar to an external host, all traffic between the attacker and a particular CyberLab host must be routed through the firewall. The only difference is that the attack route has no additional WAN hops. Therefore, this setup can effectively simulate an attack originating from an external network.
 
@@ -16,13 +16,15 @@ Download *VirtualBox* for your host OS from www.virtualbox.org and install the s
 
 Download the virtual machine files below and import them into *VirtualBox* (File -> Import Appliance):
 
-- firewall.ova
-- kali.ova
-- winxp.ova
-- winserver.ova
-- debserver.ova
-- meta.ova
-- owasp.ova
+| Host VM File                                                             | File Size  |
+| :---------------                                                         | ---------: |
+| [firewall.ova](https://drive.proton.me/urls/3QCCH2103M#FL0Mvyz7L45t)     | 496 MB     | 
+| winserver.ova                                                            | 4362 MB    |
+| winxp.ova                                                                | 1037 MB    |
+| debserver.ova                                                            | 2464 MB    |
+| meta.ova                                                                 | 640 MB     |
+| owasp.ova                                                                | 2426 MB    |
+| kali.ova                                                                 | 6831 MB    |
 
 Each file contains the virtual machine (VM) of the named CyberLab host. After importing, each host can be booted or shutdown separately from within *VirtualBox*. When a host is booted up, a window will open showing the host's terminal or GUI. You may now start to (counter-) hack your way through the network by interacting with the different hosts.
 
@@ -44,7 +46,7 @@ Each file contains the virtual machine (VM) of the named CyberLab host. After im
 **Notes** 
 - All host have static IPv4 addresses (although DHCP is offered within each subnet).
 - Prepend `victim.local` to the host name to get the host's fully qualified domain name, e.g. `firewall.victim.local`.
-- All hosts are currently set to use german regional settings by default. This includes the keyboard layout.
+- All hosts are currently set to use german regional language settings by default. This includes the keyboard layout.
 
 # Users
 | Name              | Login as               | Admin  | Default Password  | Role      |
@@ -70,4 +72,4 @@ Host `firewall.victim.local` is the lab's central node. It runs the pfSense soft
 |          |          |                   |        |                      |
 
 **Notes**
-- The firewall router forwards DNS requests it cannot resolve to the WAN and the active directory domain controller.
+- The firewall router forwards DNS requests it cannot resolve to the WAN interface (internet) and the active directory domain controller.
