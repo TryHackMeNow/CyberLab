@@ -33,7 +33,7 @@ Each file contains the virtual machine (VM) of the named CyberLab host.
 After importing, each host can be booted or shutdown separately from within *VirtualBox*. When a host is booted up, a window will open showing the host's terminal or GUI. You may now start to (counter-) hack your way through the network by interacting with the different hosts.
 
 **Notes:**
-- CyberLab is intentionally designed for an uncomplicated and fast setup. This has the tradeoff of somewhat larger file size. You may off course choose to download only the hosts that are of interest to you.
+- CyberLab is intentionally designed for an uncomplicated and fast setup. This has the tradeoff of somewhat larger file size. You may off course choose to download only the host-VMs that are of interest to you.
 - Virtual machine files might be temporarily unavailable due to servicing.
 
 # Hosts
@@ -67,13 +67,13 @@ The following user accounts (or a subset thereof) are registered on CyberLab hos
 The default login password **TryHackMe!** is supported for all users on all hosts.
 
 # Domain
-CyberLab's network resources are centrally managed by `winserver`, which is a windows active directory domain controller. The domain name is `victim.local`. The fully qualified domain name of a network resource (user, host) is `<some_resource>.victim.local`. For example, by entering `debserver` into a web browser, the home page of the debian web server will be displayed.
+Host `winserver` is an Active Directory Domain Controller. The domain name is `victim.local`. The fully qualified domain name of a network resource (user, host) is thus `<some_resource>.victim.local`. For example, by entering `http://www.debserver.victim.local` into a web browser on a lab host, the home page of the debian web server will show up.
 
 ### Shared Folders
-Hosts `debserver`, `winxp` and `winserver` have access to each other's shared folders via the SMB network protocol. For example, type in `\\debserver` into windows explorer to see the folder's shared by `debserver` on a windows host.
+Hosts `debserver`, `winxp` and `winserver` have access to each other's shared folders via the SMB network protocol. For example, type in `\\debserver` into windows explorer to see the folder's shared by `debserver`.
 
 # Firewall
-Host `firewall.victim.local` is the lab's central node. It runs *pfSense CE* and with that is a firewall with IP routing, DHCP and DNS resolution capabilities. The firewall is managed via web interface. The web interface is online at http://172.20.20.10. User: `admin`, password: `TryHackMe!`.
+Host `firewall.victim.local` is the lab's central node. It runs *pfSense CE* and with that is a firewall with IP routing, DHCP and DNS resolution capabilities. The firewall is managed via web interface. The web interface is online at `http://172.20.20.10` (port 80). User: `admin`, password: `TryHackMe!`.
 
 The firewall router has 4 network adapter cards. Each network adapter acts as the local gateway for the attached subnet. For example, the default gateway of the `LAN` subnet has IP address `172.20.20.10`. The firewall router forwards DNS requests it cannot resolve to the WAN interface (internet) and the active directory domain controller.
 
