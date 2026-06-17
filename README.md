@@ -19,7 +19,7 @@ Download the virtual machine files below and import them into *VirtualBox* (File
 
 | Virtual Machine                                                          | File Size  |
 | :---------------                                                         | ---------: |
-| **Version 0.9 (current)**                                                    |            |
+| **Version 0.9 (current)**                                                |            |
 | [firewall.ova](https://drive.proton.me/urls/3QCCH2103M#FL0Mvyz7L45t)     | 496 MB     | 
 | winserver.ova                                                            | 4362 MB    |
 | [winxp.ova](https://drive.proton.me/urls/6VG9V701VG#zHszvhBsyNrO)        | 1037 MB    |
@@ -75,6 +75,7 @@ Hosts `debserver`, `winxp` and `winserver` have access to each other's shared fo
 # Firewall
 Host `firewall.victim.local` is the lab's central node. It runs *pfSense CE* and with that is a firewall with IP routing, DHCP and DNS resolution capabilities. The firewall is managed via web interface. The web interface is online at `http://172.20.20.10` (port 80). User: `admin`, password: `TryHackMe!`.
 
+### Network Adapters
 The firewall router has 4 network adapter cards. Each network adapter acts as the local gateway for the attached network segment. For example, the default gateway of the `LAN` subnet has IP address `172.20.20.10`. The firewall router forwards DNS requests it cannot resolve to the WAN interface (internet) and the active directory domain controller.
 
 | Adapter  | Name     | IP                | Subnet | VirtualBox Link Type |
