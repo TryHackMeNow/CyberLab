@@ -86,6 +86,9 @@ The firewall router has 4 network adapter cards. Each network adapter acts as th
 | 4        | em3      | 172.20.40.10      | ATCK   | NAT-Network          |
 |          |          |                   |        |                      |
 
+All network adapters are configured to use *VirtualBox*'s **NAT-Network** link type.
+This isolates all CyberLab hosts from internet-originating accesses. Hosts can still communicate with each other and request internet resources.
+
 # License Information
 This contribution uses the following free software components:
 
