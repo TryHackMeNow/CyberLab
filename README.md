@@ -1,4 +1,5 @@
 # CyberLab
+
 *VirtualBox*-based hacking lab which can be run on a single PC. All lab computers (hosts) are virtual machines executed within *VirtualBox*. The hosts are partitioned into a LAN, WAN and a DMZ subnet. The traffic between the subnets is routed by a pfSense firewall router. The firewall router is itself a virtual machine. Hosts include a Kali-Linux-based attacker box, Metasploitable- and OWASP-BWA victim boxes and a Windows domain controller.
 
 ![Network Overview](./Illustrations/CyberLab%20Overview.drawio.svg)
@@ -10,7 +11,7 @@ The lab setup is a two-step procedure:
 
 ### 1. Download VirtualBox
 
-Download *VirtualBox* for your host OS from www.virtualbox.org and install the software.
+Download *VirtualBox* for your host OS from www.virtualbox.org and install the software. 
 
 ### 2. Import VMs into VirtualBox
 
@@ -18,6 +19,7 @@ Download the virtual machine files below and import them into *VirtualBox* (File
 
 | Virtual Machine                                                          | File Size  |
 | :---------------                                                         | ---------: |
+| **Version 0.9 (current)**                                                    |            |
 | [firewall.ova](https://drive.proton.me/urls/3QCCH2103M#FL0Mvyz7L45t)     | 496 MB     | 
 | winserver.ova                                                            | 4362 MB    |
 | [winxp.ova](https://drive.proton.me/urls/6VG9V701VG#zHszvhBsyNrO)        | 1037 MB    |
@@ -29,7 +31,9 @@ Download the virtual machine files below and import them into *VirtualBox* (File
 Each file contains the virtual machine (VM) of the named CyberLab host. After importing, each host can be booted or shutdown separately from within *VirtualBox*. When a host is booted up, a window will open showing the host's terminal or GUI. You may now start to (counter-) hack your way through the network by interacting with the different hosts.
 
 **Notes**: 
-- CyberLab is intentionally designed for an uncomplicated and fast setup. This has the tradeoff of somewhat larger VM file sizes. You may off course choose to download only the hosts that are of interest to you.
+- CyberLab is intentionally designed for an uncomplicated and fast setup. This has the tradeoff of somewhat larger virtual machine file sizes. You may off course choose to download only the hosts that are of interest to you.
+- The lab was successfully tested with *VirtualBox* 2.7.8.
+- Hacking/pentesting challenges might be included in future released of CyberLab.
 - Virtual machine files might be temporarily unavailable due to servicing.
 
 # Hosts
@@ -74,3 +78,18 @@ Host `firewall.victim.local` is the lab's central node. It runs the pfSense soft
 
 **Notes**
 - The firewall router forwards DNS requests it cannot resolve to the WAN interface (internet) and the active directory domain controller.
+
+# License Information
+This contribution uses the following free software components:
+
+| Software Component       | Version (amd64) |
+| :----------------------- | --------------: |
+| pfSense CE               | 2.7.2           |
+| Kali-Linux               | 2026.1          |
+| Metasploitable-2         | 2.0.0           |
+| OWASP-BWA                | 1.2             |
+| Debian-Linux             | 13.5.0          |
+| Windows Server           | 2012 R2         |
+| Windows XP               | Pro SP1         |
+
+All above software components were downloaded as pre-build ISO images. As such they are free to use in non-commercial software projects without license restrictions. This contribution modified the above components via manual configuration and re-packaging into the new 'source' state, which are the editable virtual machines downloadable from this repository.
