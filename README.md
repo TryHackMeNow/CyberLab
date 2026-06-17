@@ -30,13 +30,11 @@ Download the virtual machine files below and import them into *VirtualBox* (File
 
 Each file contains the virtual machine (VM) of the named CyberLab host. 
 
-**Note:**
-CyberLab is intentionally designed for an uncomplicated and fast setup. This has the tradeoff of somewhat larger file size. You may off course choose to download only the hosts that are of interest to you.
-
 After importing, each host can be booted or shutdown separately from within *VirtualBox*. When a host is booted up, a window will open showing the host's terminal or GUI. You may now start to (counter-) hack your way through the network by interacting with the different hosts.
 
-**Note:**
-Virtual machine files might be temporarily unavailable due to servicing.
+**Notes:**
+- CyberLab is intentionally designed for an uncomplicated and fast setup. This has the tradeoff of somewhat larger file size. You may off course choose to download only the hosts that are of interest to you.
+- Virtual machine files might be temporarily unavailable due to servicing.
 
 # Hosts
 | Host Name    | IP (Static)       | Subnet   | Description                   | OS                | Role     | 
