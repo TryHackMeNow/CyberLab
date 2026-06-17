@@ -1,6 +1,6 @@
 # CyberLab
 
-*VirtualBox*-based hacking lab which can be run on a single PC. All lab computers (hosts) are virtual machines executed within *VirtualBox*. The hosts are partitioned into a LAN, WAN and a DMZ network segment. The traffic between the subnets is routed by a pfSense firewall router. The firewall router is itself a virtual machine. Hosts include a Kali-Linux-based attacker box, Metasploitable- and OWASP-BWA victim boxes and a Windows domain controller.
+*VirtualBox*-based hacking lab which can be run on a single PC. All lab computers (hosts) are virtual machines executed within *VirtualBox*. The hosts are partitioned into a LAN, WAN and a DMZ network segment. The traffic between the network segments is routed by a pfSense firewall router. The firewall router is itself a virtual machine. Hosts include a Kali-Linux-based attacker box, Metasploitable- and OWASP-BWA victim boxes and a Windows AD domain controller.
 
 ![Network Overview](./Illustrations/CyberLab%20Overview.drawio.svg)
 
