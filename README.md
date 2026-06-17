@@ -1,7 +1,7 @@
 # CyberLab
 *VirtualBox*-based hacking lab which can be run on a single PC. All lab computers (hosts) are virtual machines executed within *VirtualBox*. The hosts are partitioned into a LAN, WAN and a DMZ subnet. The traffic between the subnets is routed by a pfSense firewall router. The firewall router is itself a virtual machine. Hosts include a Kali-Linux-based attacker box, Metasploitable- and OWASP-BWA victim boxes and a Windows domain controller.
 
-![Network Overview](./Illustrations/CyberLab%20Overview%20Light.drawio.svg)
+![Network Overview](./Illustrations/CyberLab%20Overview.drawio.svg)
 
 Similar to an external host, all traffic between the attacker and a particular CyberLab host must be routed through the firewall. The only difference is that the attack route has no additional WAN hops. Therefore, this setup can effectively simulate an attack originating from an external network.
 
@@ -16,13 +16,13 @@ Download *VirtualBox* for your host OS from www.virtualbox.org and install the s
 
 Download the virtual machine files below and import them into *VirtualBox* (File -> Import Appliance):
 
-| Host VM File                                                             | File Size  |
+| Virtual Machine                                                          | File Size  |
 | :---------------                                                         | ---------: |
 | [firewall.ova](https://drive.proton.me/urls/3QCCH2103M#FL0Mvyz7L45t)     | 496 MB     | 
 | winserver.ova                                                            | 4362 MB    |
-| winxp.ova                                                                | 1037 MB    |
+| [winxp.ova}(https://drive.proton.me/urls/6VG9V701VG#zHszvhBsyNrO)        | 1037 MB    |
 | debserver.ova                                                            | 2464 MB    |
-| meta.ova                                                                 | 640 MB     |
+| meta.ova (https://drive.proton.me/urls/GTWSPT37BG#cSaLFrntNRT9)          | 640 MB     |
 | owasp.ova                                                                | 2426 MB    |
 | kali.ova                                                                 | 6831 MB    |
 
