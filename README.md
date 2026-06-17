@@ -28,13 +28,15 @@ Download the virtual machine files below and import them into *VirtualBox* (File
 | owasp.ova                                                                | 2426 MB    |
 | kali.ova                                                                 | 6831 MB    |
 
-Each file contains the virtual machine (VM) of the named CyberLab host. After importing, each host can be booted or shutdown separately from within *VirtualBox*. When a host is booted up, a window will open showing the host's terminal or GUI. You may now start to (counter-) hack your way through the network by interacting with the different hosts.
+Each file contains the virtual machine (VM) of the named CyberLab host. 
 
-**Notes**: 
-- CyberLab is intentionally designed for an uncomplicated and fast setup. This has the tradeoff of somewhat larger file size. You may off course choose to download only the hosts that are of interest to you.
-- The lab was successfully tested with *VirtualBox* 2.7.8.
-- Hacking/pentesting challenges might be included in future released of CyberLab.
-- Virtual machine files might be temporarily unavailable due to servicing.
+**Note:**
+CyberLab is intentionally designed for an uncomplicated and fast setup. This has the tradeoff of somewhat larger file size. You may off course choose to download only the hosts that are of interest to you.
+
+After importing, each host can be booted or shutdown separately from within *VirtualBox*. When a host is booted up, a window will open showing the host's terminal or GUI. You may now start to (counter-) hack your way through the network by interacting with the different hosts.
+
+**Note:**
+Virtual machine files might be temporarily unavailable due to servicing.
 
 # Hosts
 | Host Name    | IP (Static)       | Subnet   | Description                   | OS                | Role     | 
@@ -51,9 +53,11 @@ Each file contains the virtual machine (VM) of the named CyberLab host. After im
 **Notes** 
 - All host have static IPv4 addresses (although DHCP is offered within each subnet).
 - All hosts are currently set to use german regional language settings by default. This includes the keyboard layout.
-- Prepend `victim.local` to the host name to get the host's fully qualified domain name, e.g. `firewall.victim.local`.
 
 # Users
+
+The following user accounts (or a subset thereof) are registered on CyberLab hosts:
+
 | Name              | Login as               | Password | Admin  |  Role    |
 | :---------------- | :-------------------   | ---------| :----: |--------: |
 | Administrator     | `VICTIM\Administrator` | admin    | x      | Victim   |
@@ -64,11 +68,16 @@ Each file contains the virtual machine (VM) of the named CyberLab host. After im
 
 The default login password **TryHackMe!** is supported for all users on all hosts.
 
-**Notes**: 
-- prepend `victim.local` to the user name to get the user's fully-qualified domain name (FQDN), e.g. `alice.victim.local`.
+# Domain
+CyberLab's network resources are centrally managed by `winserver`, which is a windows active directory domain controller. The domain name is `victim.local`. The fully qualified domain name of a network resource (user, host) is `<some_resource>.victim.local`. For example, by entering `debserver` into a web browser, the home page of the debian web server will be displayed.
 
-# Firewall Router
-Host `firewall.victim.local` is the lab's central node. It runs *pfSense CE* and with that is a firewall with IP routing, DHCP and DNS resolution capabilities. This host has 4 network adapter cards. Each network adapter acts as the local gateway for the attached subnet. For example, the default gateway of the `LAN` subnet has IP address `172.20.20.10`. 
+### Shared Folders
+Hosts `debserver`, `winxp` and `winserver` have access to each other's shared folders via the SMB network protocol. For example, type in `\\debserver` into windows explorer to see the folder's shared by `debserver` on a windows host.
+
+# Firewall
+Host `firewall.victim.local` is the lab's central node. It runs *pfSense CE* and with that is a firewall with IP routing, DHCP and DNS resolution capabilities. The firewall is managed via web interface. The web interface is online at http://172.20.20.10. User: `admin`, password: `TryHackMe!`.
+
+The firewall router has 4 network adapter cards. Each network adapter acts as the local gateway for the attached subnet. For example, the default gateway of the `LAN` subnet has IP address `172.20.20.10`. The firewall router forwards DNS requests it cannot resolve to the WAN interface (internet) and the active directory domain controller.
 
 | Adapter  | Name     | IP                | Subnet | VirtualBox Link Type |
 | :------- | :------  | :---------------- | :------| :------------------- |
@@ -77,13 +86,6 @@ Host `firewall.victim.local` is the lab's central node. It runs *pfSense CE* and
 | 3        | em2      | 172.20.30.10      | DMZ    | NAT-Network          |
 | 4        | em3      | 172.20.40.10      | ATCK   | NAT-Network          |
 |          |          |                   |        |                      |
-
-#### Web Interface
-
-The firewall router is managed via web browser. The web interface is online at the firewall's LAN adapter address, i.e. http://172.20.20.10. User: `admin`, password: `TryHackMe!`
-
-**Notes**
-- The firewall router forwards DNS requests it cannot resolve to the WAN interface (internet) and the active directory domain controller.
 
 # License Information
 This contribution uses the following free software components:
