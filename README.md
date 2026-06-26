@@ -21,12 +21,12 @@ Download the virtual machine files below and import them into *VirtualBox* (File
 | :---------------                                                         | ---------: |
 | **Version 0.9 (current)**                                                |            |
 | [firewall.ova](https://drive.proton.me/urls/3QCCH2103M#FL0Mvyz7L45t)     | 496 MB     | 
-| winserver.ova                                                            | 4362 MB    |
+| [winserver.ova](https://drive.proton.me/urls/SJV5SE5H08#l1PnzgGkzL0r)    | 4362 MB    |
 | [winxp.ova](https://drive.proton.me/urls/6VG9V701VG#zHszvhBsyNrO)        | 1037 MB    |
-| debserver.ova                                                            | 2464 MB    |
+| [debserver.ova](https://drive.proton.me/urls/5ZAWTRBMKR#RHUrZRW3anwx)    | 2464 MB    |
 | [meta.ova](https://drive.proton.me/urls/GTWSPT37BG#cSaLFrntNRT9)         | 640 MB     |
-| owasp.ova                                                                | 2426 MB    |
-| kali.ova                                                                 | 6831 MB    |
+| [owasp.ova](https://drive.proton.me/urls/6JMYK9QJ88#V4piEKJffVP2)        | 2426 MB    |
+| [kali.ova](https://drive.proton.me/urls/Z5PYXWVVGW#hr7ZJ5TyEsAa)         | 6831 MB    |
 
 Each file contains the virtual machine (VM) of the named CyberLab host. 
 
